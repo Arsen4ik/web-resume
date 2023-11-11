@@ -98,14 +98,6 @@ const AboutMe = () => {
                     </ul>
                 </div>
             </div>
-            <img className=" h-5 invert" src={`./contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`./public/contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`../public/contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`../../public/contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`../../../public/contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`../../../../public/contacts/vk.svg`} alt="" />
-            <img className=" h-5 invert" src={`../../../../../public/contacts/vk.svg`} alt="" />
-            
         </section>
     )
 }
