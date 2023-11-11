@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path='tech' element={<About />} />
     </Route>
   ),
-  // {basename: "/web-resume-app"}
+  {basename: "/web-resume"}
 );
 
 const queryClient = new QueryClient({
