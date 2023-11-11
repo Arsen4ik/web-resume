@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px auto;
+}
+.logo-hov-animation:hover>img {
+  transform: rotateY(180deg);
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(-20%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      opacity: 0;
+  }
+
+  50% {
+      transform: translateY(-10%);
+      opacity: .5;
+  }
+
+  100% {
+      transform: translateY(0%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      opacity: 1;
+  }
+}
+
+.animate-bounce-once {
+  transition: all ease-in-out;
+  animation: bounce .5s;
+}
+
+@keyframes bounce2 {
+  0% {
+      transform: translateX(-40%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      opacity: 0;
+  }
+
+  50% {
+      transform: translateX(-20%);
+      opacity: .5;
+  }
+
+  100% {
+      transform: translateX(0%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      opacity: 1;
+  }
+}
+
+.animate-bounce-once-2 {
+  transition: all ease-in-out;
+  animation: bounce2 .5s;
+}
+
+@keyframes bounce3 {
+  0% {
+      transform: translateX(40%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      opacity: 0;
+  }
+
+  50% {
+      transform: translateX(20%);
+      opacity: .5;
+  }
+
+  100% {
+      transform: translateX(0%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      opacity: 1;
+  }
+}
+
+.animate-bounce-once-3 {
+  transition: all ease-in-out;
+  animation: bounce3 .5s;
+}
+
+.my-text {
+  -webkit-text-stroke: 3px #525252;
+}
+
+@keyframes spin2 {
+  to {
+      transform: rotate(-360deg);
+  }
+}
+
+.animate-spin-reversed {
+  animation: spin2 1s linear infinite;
+}
+
+.dot-animation {
+  display: flex;
+  animation: moveDots 1s infinite alternate;
+}
+
+// .dot {
+//     border-radius: 50%;
+//     margin: 0 5px;
+// }
+
+@keyframes moveDots {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(20px);
+  }
+}
+
+@keyframes moveDots2 {
+  0% {
+      transform: translateX(20px);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.dot-animation-2 {
+  display: flex;
+  animation: moveDots2 1s infinite alternate;
+}
