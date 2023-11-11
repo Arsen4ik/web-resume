@@ -98,8 +98,8 @@ const AboutMe = () => {
                     </ul>
                 </div>
             </div>
-            <img className=" h-5 invert" src={`./contacts/yandex.svg`} alt="" />
-            <img className=" h-5 invert" src={`./public/contacts/yandex.svg`} alt="" />
+            <img className=" h-5 invert" src={`./contacts/telegram.svg`} alt="" />
+            <img className=" h-5 invert" src={`./public/contacts/vk.svg`} alt="" />
         </section>
     )
 }
