@@ -1,6 +1,9 @@
 import { Context } from '../../../Context/MainContext'
 import { useContext } from 'react'
 import { useEffect, useState } from "react"
+
+import arrowDown from '../Media/arrow-down.svg'
+
 // eslint-disable-next-line react/prop-types
 const Links = () => {
   const { AboutMeScroll, FetchScroll } = useContext(Context)
@@ -23,7 +26,7 @@ const Links = () => {
             <img style={{ filter: 'invert(30%)' }} className={`rounded-full border-neutral-800 h-10 w-10 transition-all ease-in-out duration-300 dot-animation
             lg:group-hover:border-4
             sm:h-8 sm:w-8
-            `} src="./arrow-down.svg" alt="" />
+            `} src={arrowDown} alt="" />
           </button>
           <button className="group flex flex-row gap-5 animate-bounce-once-3 outline-none" onClick={FetchScroll}>
             <p className={`flex items-center justify-center transition-all ease-in-out duration-300
@@ -32,7 +35,7 @@ const Links = () => {
             <img style={{ filter: 'invert(30%)' }} className={`rounded-full border-neutral-800 h-10 w-10 transition-all ease-in-out duration-300 dot-animation-2
             lg:group-hover:border-4
             sm:h-8 sm:w-8
-            `} src="./arrow-down.svg" alt="" />
+            `} src={arrowDown} alt="" />
           </button>
         </>)}
     </section>

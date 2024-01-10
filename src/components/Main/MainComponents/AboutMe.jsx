@@ -1,25 +1,27 @@
 import { Context } from '../../../Context/MainContext'
 import { useContext } from 'react'
 import { aboutMe, myStack, contacts } from '../../../scripts/aboutMeInfo'
-// import 'space1_lg' from '../../../../public/spaces/space1_img'
-// import 'space1_lg.jpg' from '../../../../public/spaces/space1_img/'
+
+import apple from '../Media/contacts/apple.svg'
+import github from '../Media/contacts/github.svg'
+import phone from '../Media/contacts/phone.svg'
+import telegram from '../Media/contacts/telegram.svg'
+import vk from '../Media/contacts/vk.svg'
+import yandex from '../Media/contacts/yandex.svg'
+
 
 // eslint-disable-next-line react/prop-types
 const AboutMe = () => {
     // const [spaceNum, setSpaceNum] = useState(2)
-    const { spaceNum, aboutMeRef } = useContext(Context)
-    // useEffect(() => {
-    //     console.log(_spaceNum);
-    //     setSpaceNum(_spaceNum)
-    // }, [_spaceNum])
+    const { spaceImg, spaceNum, aboutMeRef } = useContext(Context)
 
-    // console.log(typeof spaceNum, spaceNum, `spaces/space${spaceNum}_img/space${spaceNum}_lg.jpg`, 'spaces/space2_img/space2_lg.jpg', `spaces/space${spaceNum}_img/space${spaceNum}_lg.jpg` === 'spaces/space2_img/space2_lg.jpg');
     // console.log(spaceImg);
     return (
         <section id="AboutMe"
-        style={{
-            backgroundImage: `url(spaces/space${spaceNum}_img/space${spaceNum}_lg.jpg)`,
-        }}
+            style={{
+                // backgroundImage: `url(../Media/spaces/space${spaceNum}_img/space${spaceNum}_lg.jpg)`,
+                backgroundImage: `url(${spaceImg})`,
+            }}
             className={
                 `w-full bg-slate-300 bg-cover bg-center
             lg:min-h-screen lg:h-auto
@@ -85,15 +87,24 @@ const AboutMe = () => {
                     md:justify-end
                     `}>
                         {
-                            contacts.map(data => (
-                                <li key={data[0]} className="p-2 px-4 w-full text-center underline transition-all ease-in-out duration-100 hover:backdrop-blur-xl hover:rounded-2xl hover:backdrop-brightness-125">
-                                    <a href={data[1]} target="_blank" rel="noreferrer"
-                                        className="flex flex-row items-center justify-center gap-2">
-                                        <img className=" h-5 invert" src={`./contacts/${data[2]}.svg`} alt="" />
-                                        <p>{data[3]}</p>
-                                    </a>
-                                </li>
-                            ))
+                            contacts.map(data => {
+                                let image;
+                                if (data[2] === 'apple') image = apple
+                                else if (data[2] === 'github') image = github
+                                else if (data[2] === 'phone') image = phone
+                                else if (data[2] === 'telegram') image = telegram
+                                else if (data[2] === 'vk') image = vk
+                                else image = yandex
+                                return (
+                                    <li key={data[0]} className="p-2 px-4 w-full text-center underline transition-all ease-in-out duration-100 hover:backdrop-blur-xl hover:rounded-2xl hover:backdrop-brightness-125">
+                                        <a href={data[1]} target="_blank" rel="noreferrer"
+                                            className="flex flex-row items-center justify-center gap-2">
+                                            <img className=" h-5 invert" src={image} alt="" />
+                                            <p>{data[3]}</p>
+                                        </a>
+                                    </li>
+                                )
+                            })
                         }
                     </ul>
                 </div>

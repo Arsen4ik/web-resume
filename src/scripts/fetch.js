@@ -1,2 +1,2 @@
-const searchedRepos = ['final-project-JS-DOM', 'react-CP2', 'HTML-API-CP1', 'future-test-project-2']
+const searchedRepos = ['product-basket', 'CRM-website', 'quizlet-colours']
 export default searchedRepos

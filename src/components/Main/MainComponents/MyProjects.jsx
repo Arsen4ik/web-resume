@@ -34,7 +34,7 @@ const MyProjects = () => {
             {
                 searchRepos.map((repo, ind) => (
                     <div className={`odd:bg-neutral-100 p-20
-                    lg:grid lg:grid-cols-2 lg:grid-rows-[2fr_1fr_1fr_3fr] lg:content-start lg:justify-start
+                    lg:grid lg:grid-cols-2 lg:grid-rows-[2fr_1fr_1fr_3fr] lg:content-start lg:justify-start lg:gap-x-8
                     md:flex md:flex-col md:gap-5
                     `}
                         key={repo.id}>
@@ -42,7 +42,7 @@ const MyProjects = () => {
                         <a className={(ind % 2 ? "text-end" : "text-start")} href={repo.html_url} target="_blank" rel="noreferrer">ссылка на github: <span className="underline font-Mooli">{repo.html_url}</span></a>
                         <a className={(ind % 2 ? "text-end" : "text-start")} href={`https:/${gitName}.github.io/${repo.name}/`} target="_blank" rel="noreferrer">ссылка на github pages: <span className=" underline font-Mooli">{`https:/${gitName}.github.io/${repo.name}/`}</span></a>
                         <p className={(ind % 2 ? "text-end" : "text-start") + " text-neutral-500 font-light italic"}>#{repo.description}</p>
-                        <iframe className={(ind % 2 ? "lg:col-start-1 lg:col-end-2 lg:justify-self-start" : "lg:col-start-2 lg:col-end-3 lg:justify-self-end") + " lg:row-start-1 lg:row-end-7 w-iframe h-iframe shadow-xl rounded-2xl md:self-center md:mt-5 sm:w-56"} src={`https:/${gitName}.github.io/${repo.name}/`}></iframe>
+                        <iframe className={(ind % 2 ? "lg:col-start-1 lg:col-end-2 lg:justify-self-start" : "lg:col-start-2 lg:col-end-3 lg:justify-self-end") + " lg:row-start-1 lg:row-end-7 lg:w-iframe lg:max-w-iframe md:w-iframeMD h-iframe shadow-xl rounded-2xl md:self-center md:mt-5 sm:w-56"} src={`https:/${gitName}.github.io/${repo.name}/`}></iframe>
                     </div>))
             }
             {/* <div className="bg-neutral-100 p-20 lg:grid lg:grid-cols-2 lg:grid-rows-[2fr_1fr_1fr_3fr] lg:content-start lg:justify-start md:flex md:flex-col md:gap-5">

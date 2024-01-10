@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-import './index.css'
+import './index.scss'
 import Root from './components/Root'
 import Main from './components/Main/Main'
 // eslint-disable-next-line react-refresh/only-export-components
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path='tech' element={<About />} />
     </Route>
   ),
-  {basename: "/web-resume"}
+  { basename: "/web-resume" }
 );
 
 const queryClient = new QueryClient({

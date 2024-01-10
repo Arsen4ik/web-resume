@@ -12,8 +12,9 @@ export default {
     },
     extend: {
       width: {
-        'iframe': '568px',
-      }, 
+        'iframe': '468px',
+        'iframeMD': '468px',
+      },
       height: {
         'technologies': 'calc(100vh - 264px)',
         'lg-continue': 'calc(100vh - 336px)',
@@ -38,7 +39,7 @@ export default {
         'technologies2': '0 3%',
       },
       borderWidth: {
-        '6': '6px' 
+        '6': '6px'
       },
       invert: {
         '5': 'invert(50%)',

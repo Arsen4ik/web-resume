@@ -11,21 +11,22 @@ const Technologies = () => {
             </h2>
             <section
                 className={
-                    technologyChosed ?
+                    technologyChosed?.data?.id ?
                         "max-h-technologies h-technologies justify-self-center grid grid-cols-[1fr_3fr_5fr] grid-rows-4 mx-auto p-technologies2 py-8 gap-y-4 max-w-technologies2" :
                         `max-h-technologies h-technologies p-technologies
             flex flex-wrap flex-row justify-center content-start gap-16 gap-x-32 pt-24
              `
                 }
             >
+                {/* {JSON.stringify(technologyChosed, null, 4)} */}
                 {
-                    technologyChosed ?
+                    technologyChosed?.data?.id ?
                         <>
-                            {datas.map(el => el.id !== technologyChosed.id && <Technology key={el.id} data={el} someTechnologyChosed={someTechnologyChosed} technologyChosed={technologyChosed} />)}
-                            <div onClick={someTechnologyChosed} className="group row-start-1 row-end-5 col-start-2 col-end-3 lg:w-56 lg:h-56 md:w-44 md:h-44
+                            {datas.map(el => el.id !== technologyChosed.data?.id && <Technology key={el.id} data={el} someTechnologyChosed={someTechnologyChosed} technologyChosed={technologyChosed} />)}
+                            <div onClick={() => someTechnologyChosed(0, '')} className="group row-start-1 row-end-5 col-start-2 col-end-3 lg:w-56 lg:h-56 md:w-44 md:h-44
                 self-center justify-self-center border-solid border-4 rounded-full p-5 border-stone-300 hover:border-red-600
                 hover:p-4 transition-all ease-in-out duration-300 cursor-none">
-                                <img src={technologyChosed.img} className="" alt="" />
+                                <img src={technologyChosed.image} className="" alt="" />
                                 <button className=" group-hover:border-red-600 transition-all ease-in-out duration-300
                    bg-slate-50 border-4 border-stone-300 w-12 h-12 rounded-full relative lg:left-40 lg:bottom-56 md:left-32 md:bottom-44">❌</button>
                             </div>
